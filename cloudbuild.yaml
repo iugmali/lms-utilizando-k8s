@@ -1,0 +1,16 @@
+steps:
+ - name: 'gcr.io/cloud-builders/go'
+   args: ['install', './src/greeting']
+   env: ['GOPATH=./desafio-go']
+
+ - name: 'gcr.io/cloud-builders/go'
+   args: ['test', 'greeting']
+   env: ['GOPATH=./desafio-go']
+
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '--tag=gcr.io/$PROJECT_ID/greeting', './desafio-go']
+
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '--tag=iugmali/greeting', './desafio-go']
+
+ images: ['gcr.io/$PROJECT_ID/greeting']

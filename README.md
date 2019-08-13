@@ -1,0 +1,1 @@
+gcr.io/lms-ci-test/greeting:latest
