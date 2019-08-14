@@ -1,1 +1,1 @@
-gcr.io/lms-ci-test/greeting:latest
+https://cloud.docker.com/repository/docker/iugmali/desafio-go
